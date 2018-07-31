@@ -57,3 +57,5 @@ htmlcov
 
 # PyCharm
 .idea
+
+.pytest_cache/*

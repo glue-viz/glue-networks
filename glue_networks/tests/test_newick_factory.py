@@ -7,7 +7,7 @@ from ..newick_factory import is_newick, newick_reader
 DATA = os.path.join(os.path.dirname(__file__), 'data')
 
 
-def test_dicom(tmpdir):
+def test_newick(tmpdir):
 
     # empty_dir = tmpdir.strpath
     data = newick_reader(os.path.join(DATA, 'newick0.nwk'))
