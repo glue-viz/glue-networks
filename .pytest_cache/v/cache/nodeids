@@ -1,0 +1,3 @@
+[
+  "glue_networks/tests/test_newick_factory.py::test_dicom"
+]

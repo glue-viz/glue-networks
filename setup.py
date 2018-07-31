@@ -6,23 +6,24 @@ from setuptools import setup, find_packages
 
 entry_points = """
 [glue.plugins]
-myplugin=myplugin:setup
+glue_networks=glue_networks:setup
 """
 
 with open('README.rst') as infile:
     LONG_DESCRIPTION = infile.read()
 
-with open('myplugin/version.py') as infile:
+with open('glue_networks/version.py') as infile:
     exec(infile.read())
 
-setup(name='myplugin',
+setup(name='glue-networks',
       version=__version__,
-      description='Glue networks',
+      description='Plugin for glue to visualize network data',
       long_description=LONG_DESCRIPTION,
-      url="https://github.com/glue-viz/glue-networks",
+      url="https://github.com/chaityacshah/glue-networks",
       author='',
       author_email='',
       packages = find_packages(),
-      package_data={},
-      entry_points=entry_points
+      package_data={'glue_networks.tests':['data/*']},
+      entry_points=entry_points,
+      install_requires=['glue-core>=0.12']
     )
